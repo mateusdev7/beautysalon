@@ -1,0 +1,31 @@
+.font-p-medium {
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+}
+
+.font-p-semibold {
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+
+.font-p-regular {
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+}
+
+.font-f-regular {
+    font-weight: 400;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.font-f-medium {
+    font-weight: 500;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.font-b-regular {
+    font-weight: 400;
+    font-family: 'Berkshire Swash', cursive;
+}
+
+ 

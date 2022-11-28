@@ -1,0 +1,47 @@
+/* Global */
+@import "./css/global/resets.css";
+@import "./css/global/header.css";
+@import "./css/global/header-dropdownmenu.css";
+@import "./css/global/footer.css";
+@import "./css/global/header-menu-mobile.css";
+
+/* Componentes */
+@import "./css/componentes/componentes.css";
+
+/* Utildades */
+@import "./css/utilidades/cores.css";
+@import "./css/utilidades/fontes.css";
+
+/* Index Cliente */
+@import "./css/section-apresentacao/apresentacao.css";
+@import "./css/main-barbearias/barbearias.css";
+@import "./css/entrar-form/entrar.css";
+@import "./css/modais/modal-entrar.css";
+@import "./css/cadastrar-cliente-form/cadastrar-cliente.css";
+@import "./css/modais/modal-cadastrar.css";
+@import "./css/cadastrar-salao-form/cadastrar-salao.css";
+@import "./css/modais/modal-cadastrar-salao.css";
+
+/* Cliente CSS */
+@import "./css/cliente/dadosCliente/dadosCliente.css";
+@import "./css/cliente/dadosCliente/formDadosCliente.css";
+@import "./css/cliente/agendamentosCliente/agendamentos.css";
+@import "./css/cliente/perfilClienteTabContent/tabContent.css";
+@import "./css/cliente/dadosCliente/dropDownMenu.css";
+@import "./css/cliente/dadosCliente/dropDownMenuIndex.css";
+
+/* Salao CSS */
+@import "./css/salao/dadosSalao/dadosSalao.css";
+@import "./css/salao/dadosSalao/formDadosSalao.css";
+@import "./css/salao/perfilSalaoTabContent/tabContent.css";
+@import "./css/salao/agendamentosSalao/agendamentos.css";
+@import "./css/salao/cadastrarProfissional/cadastrarProfissional.css";
+@import "./css/salao/visualizarProfissional/visualizarProfissional.css";
+
+/* Salão cortes incriveis */
+@import "./css/salaoCortesIncriveis/leftSalaoContainer.css";
+@import "./css/salaoCortesIncriveis/rightSalaoContainer.css";
+@import "./css/modais/modalCorrect.css";
+@import "./css/salaoCortesIncriveis/modal-agendamento-styles.css";
+@import "./css/modais/modalIncorrect.css";
+@import "./css/salaoCortesIncriveis/modal-agendamento-incorrect.styles.css"

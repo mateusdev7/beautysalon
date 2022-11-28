@@ -1,0 +1,70 @@
+header {
+  background: var(--black1);
+}
+
+.header-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.header-navegacao {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+.cadastrar, .arrow-img, [data-modal=botaoCadastroCliente], [data-modal=botaoCadastroSalao] {
+  cursor: pointer;
+}
+
+.header-nav-notificacao {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header-nav-cadastrar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dropdown-menu li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dropdown-menu li + li {
+  margin-top: 20px;
+}
+
+.header-navegacao a {
+  position: relative;
+  font-size: 1rem;
+}
+
+.header-navegacao a:hover:nth-child(n+2) {
+  color: var(--brancototal);
+  transition: 0.3s;
+}
+
+[data-perfil-dropdown-index] {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .logo {
+    width: 150px;
+    height: 25px;
+  }
+  .header-container {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}/*# sourceMappingURL=header.css.map */

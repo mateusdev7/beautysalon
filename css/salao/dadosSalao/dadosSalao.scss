@@ -1,0 +1,12 @@
+.dados-left-container {
+    .dados-left-info-options h3:nth-child(3)::before {
+        content: url("../../../imagens/configuracao_conta_salao/cadastrar_profissional_icon_gold.svg");
+        margin-top: 4px;
+        cursor: pointer;
+    }
+    .dados-left-info-options h3:nth-child(4)::before {
+        content: url("../../../imagens/configuracao_conta_salao/tesoura_salao_icon_gold.svg");
+        margin-top: 4px;
+        cursor: pointer;
+    }
+}

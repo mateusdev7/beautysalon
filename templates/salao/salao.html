@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="stylesheet" href="../../imports.css">
+  <link rel="icon" href="../../icon_logo_favicon.ico" type="image/svg+xml">
+
+  <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Fira+Sans:wght@400;500&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script> -->
+  <script type="module" src="../../js/script.js" defer></script>
+  <script src="../../scripts/User/redirect.js" defer></script>
+  <script src="../../scripts/User/registerUser.js" defer></script>
+  <script src="../../scripts/User/loginUser.js" defer></script>
+  <script src="../../scripts/User/makeScheduling.js" defer></script>
+  <script>document.documentElement.classList.add('js')</script>
+  <title>Salão - Cortes Incríveis</title>
+</head>
+<body>
+  <header>
+        <div class="header-container container-header">
+            <a href="../../index.html">
+                <img src="../../imagens/header/logo_icon.svg" class="logo">
+            </a>
+            <nav data-menu="nav">
+                <button data-menu="button" aria-expanded="false" aria-controls="menu">MENU</button>
+                <ul data-menu="list" id="menu" class="header-navegacao">
+                    <li class="header-nav-notificacao">
+                        <img src="../../imagens/header/notificacao-icon.svg">
+                        <a href="#" class="font-p-medium black10">Notificações</a>
+                    </li>
+                    <li data-dropdown>
+                        <div class="header-nav-cadastrar">
+                            <img src="../../imagens/header/arrow_down.svg" class="arrow-img">
+                            <a class="font-p-medium black10 cadastrar">Cadastrar</a>
+                        </div>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <img src="../../imagens/header/cliente_icon.svg" alt="">
+                                <a class="font-p-semibold brancototal" data-modal="botaoCadastroCliente">Como Cliente</a>
+                            </li>
+                            <div class="traco"></div>
+                            <li>
+                                <img src="../../imagens/header/salao_icon.svg" alt="">
+                                <a class="font-p-semibold brancototal" data-modal="botaoCadastroSalao">Como Salão</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <a class="font-p-semibold black10 botao type1 button-login" data-modal="login">Entrar</a>
+                    <li data-perfil-dropdown-index>
+                        <img src="../../imagens/header/profile_icon.svg">
+                        <ul class="perfil-dropdown-menu-index">
+                            <li>
+                                <img src="../../imagens/header/configuracoes_conta_icon.svg">
+                                <a style="cursor: pointer;" class="font-p-semibold brancototal" data-botao-conta-cliente>Conta</a>
+                            </li>
+                            <div class="traco"></div>
+                            <li>
+                                <img src="../../imagens/header/sair_conta_icon.svg">
+                                <a style="cursor: pointer;" class="font-p-semibold brancototal" data-botao-sair-cliente>Sair</a>
+                            </li>
+                        </ul>
+                  </li>
+                </ul>
+            </nav>
+        </div>
+  </header>
+
+  <main class="container-salao-agendamento container-conteudo">
+    <div class="left-container-salao-agendamento">
+      <h1 class="destaque font-p-semibold">Opções de corte</h1>
+      
+      <div class="corte-opcao">
+        <img src="../../imagens/cliente-salao/img-opcao-corte.svg">
+        <h4 class="black1 font-p-semibold">Corte de cabelo</h4>
+        <span class="font-p-semibold black4">R$ 20,00</span>
+        <form class="form-corte-de-cabelo">
+          <input required type="checkbox" id="corteDeCabelo" name="corteDeCabelo" value="20,00">  
+        </form>
+      </div>
+
+      <div class="barba-opcao">
+        <img src="../../imagens/cliente-salao/img-opcao-barba.svg">
+        <h4 class="black1 font-p-semibold">Barba</h4>
+        <span class="font-p-semibold black4">R$ 25,00</span>
+        <form class="form-barba">
+          <input required type="checkbox" id="barba" name="barba" value="25,00">
+        </form>
+      </div>
+
+      <div class="luzes-opcao">
+        <img src="../../imagens/cliente-salao/img-opcao-luzes.svg">
+        <h4 class="black1 font-p-semibold">Luzes</h4>
+        <span class="font-p-semibold black4">R$ 40,00</span>
+        <form class="form-luzes">
+          <input required type="checkbox" id="luzes" name="luzes" value="40,00">
+        </form>
+      </div>
+
+      <div class="pigmentacao-opcao">
+        <img src="../../imagens/cliente-salao/img-opcao-pigmentacao.svg">
+        <h4 class="black1 font-p-semibold">Pigmentaçao</h4>
+        <span class="font-p-semibold black4">R$ 10,00</span>
+        <form class="form-pigmentacao">
+          <input required type="checkbox" id="pigmentacao" name="pigmentacao" value="10,00">
+        </form>
+      </div>
+
+      <div class="sobrancelha-opcao">
+        <img src="../../imagens/cliente-salao/img-opcao-sobrancelha.svg">
+        <h4 class="black1 font-p-semibold">Sobrancelha</h4>
+        <span class="font-p-semibold black4">R$ 5,00</span>
+        <form class="form-sobrancelha">
+          <input required type="checkbox" id="sobrancelha" name="sobrancelha" value="5,00">
+        </form>
+      </div>
+      <h1 class="destaque font-p-semibold">Data e Hora</h1>
+      <div class="container-data-and-hour">
+        <div class="container-data">
+          <form class="form-data-agendamento">
+            <label class="font-p-semibold black5" for="dataAgendamento">Data</label>
+            <input placeholder="dd/mm/yyyy" type="date" id="dataAgendamento" name="dataAgendamento">
+          </form>
+        </div>
+        <div class="container-hour">
+          <form class="form-hora-agendamento">
+            <label class="font-p-semibold black5" for="horaAgendamento">Hora</label>
+            <input required type="time" id="horaAgendamento" name="horaAgendamento">
+          </form>
+        </div>
+      </div>
+
+      <h1 class="destaque font-p-semibold">Escolha o Profissional</h1>
+      <div class="container-geral-professional">
+        <div class="container-professional">
+          <div class="container-professional-name">
+            <div class="container-professional-informations">
+              <h3 class="font-p-regular black3">Julia Machado</h3>
+              <div class="container-professional-experience">
+                <img src="../../imagens/cliente-salao/time-experience.svg">
+                <span class="font-f-regular black4">2 ano(s) de experiência</span>
+              </div>
+            </div>
+            <img src="../../imagens/cliente-salao/imagem-julia-funcionaria-maior.png" class="avatar-julia">
+          </div>
+        </div>
+        <div class="container-professional">
+          <div class="container-professional-name">
+            <div class="container-professional-informations">
+              <h3 class="font-p-regular black3">Heitor Assad</h3>
+              <div class="container-professional-experience">
+                <img src="../../imagens/cliente-salao/time-experience.svg">
+                <span class="font-f-regular black4">1 ano(s) de experiência</span>
+              </div>
+            </div>
+            <img src="../../imagens/cliente-salao/imagem-heitor-funcionario-maior.png" class="avatar-heitor">
+          </div>
+        </div>
+        <div class="container-professional">
+          <div class="container-professional-name">
+            <div class="container-professional-informations">
+              <h3 class="font-p-regular black3">Rafael Marques</h3>
+              <div class="container-professional-experience">
+                <img src="../../imagens/cliente-salao/time-experience.svg">
+                <span class="font-f-regular black4">3 ano(s) de experiência</span>
+              </div>
+            </div>
+            <img src="../../imagens/cliente-salao/imagem-rafael-funcionario-maior.png" class="avatar-rafael">
+          </div>
+        </div>
+      </div>
+      <button data-abrir-modal-agendamento type="input" class="font-p-semibold botao-confirmar-agendamento black3 type1">Confirmar Agendamento</button>
+    </div>
+
+    <div class="right-container-salao-agendamento">
+      <img src="../../imagens/cliente-salao/img-cortes-incriveis.jpg" alt="Imagem representando o salão" class="salao-logo">
+      <div class="container-informations">
+        <div class="salao-informations">
+          <h1 class="font-p-semibold black3">Cortes incríveis</h1>
+          <div>
+            <img src="../../imagens/cliente-salao/img-star.svg">
+            <span class="font-p-semibold black2">4.2</span>
+          </div>
+        </div>
+        <h2 style="text-align: center; margin-bottom: 20px;" class="font-p-semibold black3">Funcionários</h2>
+        <div class="container-professional">
+            <div class="container-professional-name">
+              <div class="container-professional-informations">
+                <h3 class="font-p-regular black3">Julia Machado</h3>
+                <div class="container-professional-experience">
+                  <img src="../../imagens/cliente-salao/time-experience.svg">
+                  <span class="font-f-regular black4">2 ano(s) de experiência</span>
+                </div>
+              </div>
+              <img src="../../imagens/cliente-salao/imagem-julia-funcionaria-maior.png" class="avatar-julia">
+            </div>
+        </div>
+        <div class="container-professional">
+            <div class="container-professional-name">
+              <div class="container-professional-informations">
+                <h3 class="font-p-regular black3">Heitor Assad</h3>
+                <div class="container-professional-experience">
+                  <img src="../../imagens/cliente-salao/time-experience.svg">
+                  <span class="font-f-regular black4">1 ano(s) de experiência</span>
+                </div>
+              </div>
+              <img src="../../imagens/cliente-salao/imagem-heitor-funcionario-maior.png" class="avatar-heitor">
+            </div>
+        </div>
+        <div class="container-professional">
+            <div class="container-professional-name">
+              <div class="container-professional-informations">
+                <h3 class="font-p-regular black3">Rafael Marques</h3>
+                <div class="container-professional-experience">
+                  <img src="../../imagens/cliente-salao/time-experience.svg">
+                  <span class="font-f-regular black4">3 ano(s) de experiência</span>
+                </div>
+              </div>
+              <img src="../../imagens/cliente-salao/imagem-rafael-funcionario-maior.png" class="avatar-rafael">
+            </div>
+        </div>
+
+        <h2 style="text-align: center;" class="font-p-semibold black3">Data</h2>
+        <div class="container-data-result">
+          <span class="data-result font-p-semibold black4">YYYY/MM/DD</span>
+        </div>
+        <h2 style="text-align: center;" class="font-p-semibold black3">Hora</h2>
+        <div class="container-hora-result">
+          <span class="hora-result font-p-semibold black4">HH:MM</span>
+        </div>
+        <h2 style="text-align: center;" class="font-p-semibold black3">Valor Total</h2>
+        <div class="container-valor-result">
+          <span class="valor-result font-p-semibold">R$ 00,00</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <footer class="footer-bg">
+        <div class="footer container-conteudo">
+            <div class="footer-logo">
+                <img src="../../imagens/header/logo_icon.svg">
+            </div>
+            <div class="footer-contato">
+                <h3 class="font-p-semibold brancototal">Contato</h3>
+                <ul class="font-f-regular black7">
+                    <li><a href="tel:+5527999999999">+55 27 99999-9999</a></li>
+                    <li><a href="mailto:contato@bm.com">contato@bm.com</a></li>
+                    <li>Avenida Professor Hermínio Blackman</li>
+                    <li>Vitória - Espírito Santo</li>
+                </ul>
+                <div class="footer-redes">
+                    <img src="../../imagens/redes_icons/facebook_icon.svg">
+                    <img src="../../imagens/redes_icons/intagram_icon.svg">
+                    <img src="../../imagens/redes_icons/twitter_icon.svg">
+                </div>
+            </div>
+            <div class="footer-suporte">
+                <h3 class="font-p-semibold brancototal">Suporte</h3>
+                <nav>
+                    <ul class="font-f-regular black7">
+                        <li><a href="centraldeajuda.html">Central de Ajuda</a></li>
+                        <li><a href="comoagendar.html">Como agendar</a></li>
+                        <li><a href="comocadastrar.html">Como cadastrar meu salão</a></li>
+                        <li><a href="pagamentos.html">Métodos de pagamento</a></li>
+                        <li><a href="faleconosco.html">Fale conosco</a></li>
+                        <li><a href="ouvidoria.html">Ouvidoria</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <p class="footer-copy font-f-regular brancototal">BM © Alguns Direitos Reservados.</p>
+        </div>
+  </footer>
+
+  <div class="modal-container-correct-agendamento" data-modal="agendamento">
+    <div class="agendamento-container modal">
+      <button data-modal="fechar-agendamento" class="button-fechar-agendamento font-p-semibold">X</button>
+      <div class="agendamento-container-img">
+        <img src="../../imagens/cliente-salao/correct-icon-modal.svg">
+      </div>
+      <div class="agendamento-container-informations">
+        <h1 class="font-p-semibold black1">Parábens</h1>
+        <p class="font-f-regular black4">Seu agendamento foi realizado com <br>sucesso</p>
+        <button type="input" class="font-p-semibold botao-concluir black3 type1">Concluir</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-container-incorrect-agendamento" data-modal="agendamento-incorrect">
+    <div class="agendamento-container-incorrect modal">
+      <button data-modal="fechar-agendamento-incorrect" class="button-fechar-agendamento-incorrect font-p-semibold">X</button>
+      <div class="agendamento-container-incorrect-img">
+        <img src="../../imagens/cliente-salao/incorrect-icon-modal.svg">
+      </div>
+      <div class="agendamento-container-incorrect-informations">
+        <h1 class="font-p-semibold black1">Campos Obrigatórios</h1>
+        <p class="font-f-regular black4">Campos obrigatórios não preenchidos</p>
+        <button type="input" class="font-p-semibold botao-voltar black3 type1">Voltar</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-container" data-modal="containerLogin">
+        <div class="entrar-form-container modal">
+            <button data-modal="fechar" class="fechar-entrar font-p-semibold">X</button>
+            <h1 class="font-b-regular brancototal">Entre com a sua conta</h1>
+            <form action="" class="formulario-entrar">
+                <div>
+                    <label for="emailLogin" class="font-p-semibold black12">E-mail</label>
+                    <input type="email" id="emailLogin" name="emailLogin" placeholder="Digite seu e-mail">
+                </div>
+                <div>
+                    <label for="descriptionAccess" class="font-p-semibold black12">Senha</label>
+                    <div class="campo-senha">
+                        <input type="password" id="descriptionAccess" name="descriptionAccess" placeholder="Digite sua senha">
+                        <img src="../../imagens/formularios/closed_eyes_icon.svg" alt="Senha escondida" class="eyes-password">
+                    </div>
+                </div>
+                <p class="responseLoginUser font-p-semibold destaque"></p>
+                <button type="input" class="botao-entrar font-p-semibold type1">Entrar</button>
+            </form>
+        </div>
+  </div>
+
+  <div class="modal-container-cadastro-cliente" data-modal="containerCadastroCliente">
+        <div class="cadastrar-form-container modal">
+            <button data-modal="fecharCadastro" class="fechar-cadastro font-p-semibold">X</button>
+            <h1 class="font-b-regular brancototal">Cadastro como Cliente</h1>
+            <form action="" class="formulario-cadastro-cliente">
+                <div>
+                    <label for="fullName" class="font-p-semibold black12">Nome Completo</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Seu nome">
+                </div>
+                <div>
+                    <label for="emailCadastroCliente" class="font-p-semibold black12">E-mail</label>
+                    <input type="email" id="emailCadastroCliente" name="emailCadastroCliente" placeholder="Digite seu e-mail">
+                </div>
+                <div>
+                    <label for="senhaCadastroCliente" class="font-p-semibold black12">Senha</label>
+                    <div class="campo-senha-cadastro">
+                        <input type="password" id="senhaCadastroCliente" name="senhaCadastroCliente" placeholder="Digite sua senha">
+                        <img src="../../imagens/formularios/closed_eyes_icon.svg" alt="Senha escondida" class="eyes-password-senha">
+                    </div>
+                    
+                </div>
+
+                <div>
+                    <label for="senhaCadastroConfirmarCliente" class="font-p-semibold black12">Confirme sua senha</label>
+                    <div class="campo-senha-cadastro">
+                        <input type="password" id="senhaCadastroConfirmarCliente" name="senhaCadastroConfirmarCliente" placeholder="Digite sua senha">
+                        <img src="../../imagens/formularios/closed_eyes_icon.svg" alt="Senha escondida" class="eyes-password-confirmar">
+                    </div>
+                </div>
+                <button type="submit" class="botao-cadastrar font-p-semibold type1">Cadastrar</button>
+            </form>
+        </div>
+  </div>
+
+  <div class="modal-container-cadastro-salao" data-modal="containerCadastroSalao">
+        <div class="cadastrar-form-container modal">
+            <button data-modal="fecharCadastroSalao" class="fechar-cadastro-salao font-p-semibold">X</button>
+            <h1 class="font-b-regular brancototal">Cadastro como Salão</h1>
+            <form action="" class="formulario-cadastro-salao">
+                <div>
+                    <label for="nomeSalao" class="font-p-semibold black12">Nome do Salão</label>
+                    <input type="text" id="nomeSalao" name="nomeSalao" placeholder="Digite o nome do salão">
+                </div>
+                <div>
+                    <label for="emailCadastroSalao" class="font-p-semibold black12">E-mail</label>
+                    <input type="email" id="emailCadastroSalao" name="emailCadastroSalao" placeholder="Digite seu e-mail">
+                </div>
+                <div>
+                    <label for="senhaCadastroSalao" class="font-p-semibold black12">Senha</label>
+                    <div class="campo-senha-cadastro-salao">
+                        <input type="password" id="senhaCadastroSalao" name="senhaCadastroSalao" placeholder="Digite sua senha">
+                        <img src="../../imagens/formularios/closed_eyes_icon.svg" alt="Senha escondida" class="eyes-password-salao">
+                    </div>
+                </div>
+
+                <div>
+                    <label for="senhaCadastroConfirmarSalao" class="font-p-semibold black12">Confirme sua senha</label>
+                    <div class="campo-senha-cadastro-salao">
+                        <input type="password" id="senhaCadastroConfirmarSalao" name="senhaCadastroConfirmarSalao" placeholder="Digite sua senha">
+                        <img src="../../imagens/formularios/closed_eyes_icon.svg" alt="Senha escondida" class="eyes-password-confirmar-salao">
+                    </div>
+                </div>
+                <button type="input" class="botao-cadastrar font-p-semibold type1">Cadastrar</button>
+            </form>
+        </div>
+  </div>
+
+</body>
+</html>

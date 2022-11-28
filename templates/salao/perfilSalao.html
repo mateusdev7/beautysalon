@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="../../icon_logo_favicon.ico" type="image/svg+xml" />
+    <link rel="stylesheet" href="../../imports.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Fira+Sans:wght@400;500&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../../main.js" defer></script>
+    <script type="module" src="../../js/script.js" defer></script>
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <title>BM - Informações Pessoais</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-container container-header">
+          <a href="../../index.html">
+              <img src="../../imagens/header/logo_icon.svg" class="logo">
+          </a>
+          <nav data-menu="nav">
+              <button data-menu="button" aria-expanded="false" aria-controls="menu">MENU</button>
+              <ul data-menu="list" id="menu" class="header-navegacao">
+                  <li class="header-nav-notificacao">
+                      <img src="../../imagens/header/notificacao-icon.svg">
+                      <a href="#" class="font-p-medium black10">Notificações</a>
+                  </li>
+                  <li>
+                    <img src="../../imagens/configuracao_conta_salao/barber-icon.svg" alt="">
+                  </li>
+              </ul>
+          </nav>
+      </div>
+    </header>
+
+    <section class="dados-container container-conteudo">
+      <div class="dados-left-container" data-tabcontent="left-dados">
+        <div class="dados-left-info">
+          <div class="dados-left-info-perfil">
+            <h3 class="font-p-semibold black3">Olá, barberia do Mateus</h3>
+            <span class="font-p-regular black4">Editar Perfil</span>
+          </div>
+        </div>
+        <div class="tab-options dados-left-info-options">
+          <h3 class="font-p-regular black4">Meus Dados</h3>
+          <h3 class="font-p-regular black4">Agendamentos</h3>
+          <h3 class="font-p-regular black4">Cadastrar Profissional</h3>
+          <h3 class="font-p-regular black4">Visualizar Profissional</h3>
+        </div>
+      </div>
+      <div class="tab dados-right-container">
+        <div class="dados-right-topo">
+          <div>
+            <h3 class="font-p-semibold black3">Meu Perfil</h3>
+            <span class="font-p-regular black1">Confirmação dos Dados</span>
+          </div>
+          <picture>
+            <source
+              media="(max-width: 800px)"
+              srcset="
+                ../../imagens/configuracao_conta_cliente/profile_cliente_menor_icon.svg
+              "
+            />
+            <img
+              src="../../imagens/configuracao_conta_cliente/profile_cliente_icon.svg"
+            />
+          </picture>
+        </div>
+        <form class="formulario-dados-salao">
+          <div>
+            <label for="nomeBarbearia" class="font-p-semibold black2"
+              >Nome da Barbearia</label
+            >
+            <input
+              type="text"
+              name="nomeBarbearia"
+              id="nomeBarbearia"
+              placeholder="Barbearia do Mateus"
+              disabled
+            />
+          </div>
+
+          <div>
+            <label for="cpfSalao" class="font-p-semibold black2">CPF</label>
+            <input
+              type="text"
+              name="cpfSalao"
+              id="cpfSalao"
+              placeholder="000.000.000-00"
+              required
+            />
+          </div>
+
+          <div>
+            <label for="emailSalao" class="font-p-semibold black2"
+              >E-mail</label
+            >
+            <input
+              type="email"
+              name="emailSalao"
+              id="emailSalao"
+              disabled
+              placeholder="mateuspaulo1337@gmail.com"
+            />
+          </div>
+
+          <div>
+            <label for="numeroTelefoneSalao" class="font-p-semibold black2"
+              >Número de telefone</label
+            >
+            <input
+              type="text"
+              name="numeroTelefoneSalao"
+              id="numeroTelefoneSalao"
+              placeholder="(99) 99999-9999"
+            />
+          </div>
+          <a class="font-p-semibold botao-confirmar-salao black3 type1"
+            >Finalizar Alterações</a
+          >
+        </form>
+      </div>
+      <div class="tab agendamentos-right-container">
+        <div class="agendamentos-right-topo">
+          <div>
+            <h3 class="font-p-semibold black3">Meus Agendamentos</h3>
+            <span class="font-p-regular black1">Lista de Agendamentos</span>
+          </div>
+          <picture>
+            <source
+              media="(max-width: 800px)"
+              srcset="../../imagens/configuracao_conta_salao/agendamento_salao_menor_icon.svg"/>
+            <img
+              src="../../imagens/configuracao_conta_salao/agendamento_salao_icon.svg"/>
+          </picture>
+        </div>
+        <div class="agendamentos-salao-container">
+          <h3 class="font-p-semibold black3">Cortes Agendados</h3>
+          <div class="agendamentos-salao-corte">
+              <div class="agendamentos-salao-info">
+                  <img src="../../imagens/configuracao_conta_salao/tesoura-salao-cliente.svg">
+                  <h3 class="font-p-semibold black2">Julia Machado</h3>
+                  <span class="font-p-regular black4">15:30</span>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab cadastrarFuncionario-right-container">
+        <div class="cadastrarFuncionario-right-topo">
+          <div>
+            <h3 class="font-p-semibold black3">Cadastrar Funcionário</h3>
+            <span class="font-p-regular black1">Inserção de dados</span>
+          </div>
+          <picture>
+            <source
+              media="(max-width: 800px)"
+              srcset="../../imagens/configuracao_conta_salao/cadastrar_funcionario_menor_icon.svg"/>
+            <img
+              src="../../imagens/configuracao_conta_salao/cadastrar_funcionario_icon.svg"/>
+          </picture>
+        </div>
+        <form class="formulario-dados-funcionario">
+          <div>
+            <label for="nomeFuncionario" class="font-p-semibold black2"
+              >Nome da Funcionario</label
+            >
+            <input
+              type="text"
+              name="nomeFuncionario"
+              id="nomeFuncionario"
+              required
+            />
+          </div>
+
+          <div>
+            <label for="telefoneFuncionario" class="font-p-semibold black2">Telefone do Funcionário</label>
+            <input
+              type="text"
+              name="telefoneFuncionario"
+              id="telefoneFuncionario"
+              placeholder="(000) 00000-0000"
+              required
+            />
+          </div>
+
+          <div class="textAreaFuncionario">
+            <label for="servicosFuncionario" class="font-p-semibold black2">Serviços</label>
+            <textarea name="servicosFuncionario" id="servicosFuncionario"></textarea>
+          </div>
+
+          <div class="container-file-upload-input">
+            <label for="imagemFuncionario" class="font-p-semibold black2">
+              <img src="../../imagens/configuracao_conta_salao/inserir-imagem-funcionario.png">
+              <input name="imagemFuncionario" id="imagemFuncionario" class="file-upload-input" type="file" onchange="readUrl(this)" accept="image/png, image/jpg, image/jpeg" type="text">
+              <p class="font-p-regular black4">Clique aqui</p>
+            </label>
+          </div>
+          <a class="font-p-semibold botao-confirmar-salao black3 type1">Finalizar Alterações</a>
+        </form>
+      </div>
+      <div class="tab visualizarFuncionario-right-container">
+        <div class="visualizarFuncionario-right-topo">
+          <div>
+            <h3 class="font-p-semibold black3">Tabela de funcionários</h3>
+            <span class="font-p-regular black1">Meus funcionários</span>
+          </div>
+          <picture>
+            <source
+              media="(max-width: 800px)"
+              srcset="../../imagens/configuracao_conta_salao/cadastrar_funcionario_menor_icon.svg"/>
+            <img
+              src="../../imagens/configuracao_conta_salao/tesoura_salao_icon.svg"/>
+          </picture>
+        </div>
+        <div class="visualizarProfissional-container">
+          <ul class="visualizarProfissional-container-list">
+            <li>
+              <img src="../../imagens/configuracao_conta_salao/imagem-ilustrativa.png" alt="">
+              <div>
+                <h3 class="font-p-semibold">Julia Machado</h3>
+                <span class="codigoAssociativo font-p-semibold black6">A592JHIAO</span>
+              </div>
+            </li>
+            <li>
+              <img src="../../imagens/configuracao_conta_salao/imagem-ilustrativa.png" alt="">
+              <div>
+                <h3 class="font-p-semibold">Julia Machado</h3>
+                <span class="codigoAssociativo font-p-semibold black6">A592JHIAO</span>
+              </div>
+            </li>
+            <li>
+              <img src="../../imagens/configuracao_conta_salao/imagem-ilustrativa.png" alt="">
+              <div>
+                <h3 class="font-p-semibold">Julia Machado</h3>
+                <span class="codigoAssociativo font-p-semibold black6">A592JHIAO</span>
+              </div>
+            </li>
+            <li>
+              <img src="../../imagens/configuracao_conta_salao/imagem-ilustrativa.png" alt="">
+              <div>
+                <h3 class="font-p-semibold">Julia Machado</h3>
+                <span class="codigoAssociativo font-p-semibold black6">A592JHIAO</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer-bg">
+      <div class="footer container-conteudo">
+        <a href="index.html" class="footer-logo">
+          <img src="../../imagens/header/logo_icon.svg" />
+        </a>
+        <div class="footer-contato">
+          <h3 class="font-p-semibold brancototal">Contato</h3>
+          <ul class="font-f-regular black7">
+            <li><a href="tel:+5527999999999">+55 27 99999-9999</a></li>
+            <li><a href="mailto:contato@bm.com">contato@bm.com</a></li>
+            <li>Avenida Professor Hermínio Black</li>
+            <li>Vitória - Espírito Santo</li>
+          </ul>
+          <div class="footer-redes">
+            <img src="../../imagens/redes_icons/facebook_icon.svg" />
+            <img src="../../imagens/redes_icons/intagram_icon.svg" />
+            <img src="../../imagens/redes_icons/twitter_icon.svg" />
+          </div>
+        </div>
+        <div class="footer-suporte">
+          <h3 class="font-p-semibold brancototal">Suporte</h3>
+          <nav>
+            <ul class="font-f-regular black7">
+              <li><a href="centraldeajuda.html">Central de Ajuda</a></li>
+              <li><a href="comoagendar.html">Como agendar</a></li>
+              <li><a href="comocadastrar.html">Como cadastrar meu salão</a></li>
+              <li><a href="pagamentos.html">Métodos de pagamento</a></li>
+              <li><a href="faleconosco.html">Fale conosco</a></li>
+              <li><a href="ouvidoria.html">Ouvidoria</a></li>
+            </ul>
+          </nav>
+        </div>
+        <p class="footer-copy font-f-regular brancototal">
+          BM © Alguns Direitos Reservados.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

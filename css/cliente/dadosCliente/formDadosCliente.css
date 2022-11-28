@@ -1,0 +1,198 @@
+.formulario-dados-cliente {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0px 20px;
+}
+
+.formulario-dados-cliente div {
+  margin-bottom: 20px;
+}
+
+.formulario-dados-cliente-radios {
+  grid-row: 4;
+  grid-column: 1;
+}
+
+.botao-confirmar-cliente, .botao-confirmar-agendamento, .botao-conluir {
+  grid-row: 5;
+  grid-column: 1/-1;
+}
+
+.formulario-dados-cliente input[type=text],
+.formulario-dados-cliente input[type=email] {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 20px;
+  border: 2px solid var(--destaque);
+  padding: 12px 20px;
+  background: none;
+  color: var(--black10);
+  font-weight: 500;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  color: var(--black2);
+  background: #f8f8f8;
+}
+.formulario-dados-cliente input[type=text]::-moz-placeholder, .formulario-dados-cliente input[type=email]::-moz-placeholder {
+  color: var(--black8);
+}
+.formulario-dados-cliente input[type=text]:-ms-input-placeholder, .formulario-dados-cliente input[type=email]:-ms-input-placeholder {
+  color: var(--black8);
+}
+.formulario-dados-cliente input[type=text]::placeholder,
+.formulario-dados-cliente input[type=email]::placeholder {
+  color: var(--black8);
+}
+.formulario-dados-cliente input[type=text]:focus,
+.formulario-dados-cliente input[type=email]:focus {
+  background: var(--brancototal);
+}
+
+.formulario-dados-cliente input[type=email] {
+  background-color: var(--black9);
+  border-color: var(--black9);
+}
+.formulario-dados-cliente input[type=email]::-moz-placeholder {
+  color: var(--black2);
+}
+.formulario-dados-cliente input[type=email]:-ms-input-placeholder {
+  color: var(--black2);
+}
+.formulario-dados-cliente input[type=email]::placeholder {
+  color: var(--black2);
+}
+
+.formulario-dados-cliente #fullName {
+  background-color: var(--black9);
+  border-color: var(--black9);
+}
+.formulario-dados-cliente #fullName::-moz-placeholder {
+  color: var(--black2);
+}
+.formulario-dados-cliente #fullName:-ms-input-placeholder {
+  color: var(--black2);
+}
+.formulario-dados-cliente #fullName::placeholder {
+  color: var(--black2);
+}
+
+.formulario-dados-cliente label, #tipoSexo {
+  margin-left: 20px;
+  margin-bottom: 4px;
+  font-size: 0.8rem;
+}
+
+.formulario-dados-cliente-radios {
+  margin-left: 20px;
+}
+
+.formulario-dados-cliente-radios label, .formulario-dados-cliente-radios div {
+  margin-left: 0;
+  margin-bottom: 0;
+}
+
+.formulario-dados-cliente-radios, .formulario-dados-cliente-radios div {
+  display: flex;
+  align-items: center;
+}
+.formulario-dados-cliente-radios.formulario-dados-cliente-radios, .formulario-dados-cliente-radios div.formulario-dados-cliente-radios {
+  gap: 1rem;
+}
+.formulario-dados-cliente-radios.formulario-dados-cliente-radios div, .formulario-dados-cliente-radios div.formulario-dados-cliente-radios div {
+  gap: 4px;
+}
+
+label {
+  cursor: pointer;
+}
+
+input[type=radio] {
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: var(--brancototal);
+  font-family: "Poppins", sans-serif;
+  width: 18px;
+  height: 18px;
+  border: 0.15em solid var(--destaque);
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type=radio]::after {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: none;
+  box-sizing: border-box;
+  transform: scale(0);
+  transition: all 120ms ease-in-out;
+}
+
+.formulario-radio-container input:checked::after {
+  background: var(--destaque);
+  transform: scale(1);
+}
+
+.botao-confirmar-cliente, .botao-confirmar-agendamento, .botao-concluir, .botao-voltar {
+  display: flex;
+  cursor: pointer;
+  box-sizing: border-box;
+  background: none;
+  color: var(--brancototal);
+  width: 100%;
+  padding: 6px 0px;
+  font-size: 1rem;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  position: relative;
+  border: none;
+}
+.botao-confirmar-cliente.type1, .botao-confirmar-agendamento.type1, .botao-concluir.type1, .botao-voltar.type1 {
+  color: var(--black3);
+}
+.botao-confirmar-cliente.type1::after, .botao-confirmar-cliente.type1::before, .botao-confirmar-agendamento.type1::after, .botao-confirmar-agendamento.type1::before, .botao-concluir.type1::after, .botao-concluir.type1::before, .botao-voltar.type1::after, .botao-voltar.type1::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 0;
+  border: 2px solid var(--black1);
+  transition: all 0.6s ease-in-out;
+}
+.botao-confirmar-cliente.type1::after, .botao-confirmar-agendamento.type1::after, .botao-concluir.type1::after, .botao-voltar.type1::after {
+  bottom: 0;
+  right: 0;
+  border-top-color: transparent;
+  border-left-color: transparent;
+}
+.botao-confirmar-cliente.type1::before, .botao-confirmar-agendamento.type1::before, .botao-concluir.type1::before, .botao-voltar.type1::before {
+  top: 0;
+  left: 0;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+}
+.botao-confirmar-cliente.type1:hover:after, .botao-confirmar-cliente.type1:hover:before, .botao-confirmar-agendamento.type1:hover:after, .botao-confirmar-agendamento.type1:hover:before, .botao-concluir.type1:hover:after, .botao-concluir.type1:hover:before, .botao-voltar.type1:hover:after, .botao-voltar.type1:hover:before {
+  height: 100%;
+}
+
+@media (max-width: 720px) {
+  .formulario-dados-cliente {
+    grid-template-columns: 1fr;
+  }
+  .botao-confirmar-cliente, .botao-confirmar-agendamento, .botao-concluir, .botao-voltar {
+    grid-row: 7;
+  }
+  .formulario-dados-cliente-radios {
+    grid-row: 6;
+  }
+}/*# sourceMappingURL=formDadosCliente.css.map */

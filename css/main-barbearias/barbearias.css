@@ -1,0 +1,109 @@
+.barbearia-bg {
+  background: var(--black1);
+}
+
+.barbearia-conteudo {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.barbearia-conteudo h1 {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 60px;
+}
+.barbearia-conteudo h1:before {
+  content: "";
+  display: inline-block;
+  height: 8px;
+  width: 28px;
+  background: var(--destaque);
+  border-radius: 10px;
+}
+
+.barbearia-lista img[src$=".png"] {
+  border-radius: 20px 20px 0px 0px;
+  box-shadow: 1px 0px 12px 1px #1a1b29;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.barbearia-lista {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+}
+
+.barbearia-lista li {
+  width: 230px;
+  cursor: pointer;
+}
+
+.barbearia-informacao {
+  background: var(--black1);
+  box-shadow: 1px 0px 12px 1px var(--black2);
+  border-radius: 0px 0px 20px 20px;
+  padding: 20px 20px 20px 20px;
+}
+
+.barbearia-informacao h3 {
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+.barbearia-informacao p {
+  font-size: 0.8rem;
+  line-height: 1.6rem;
+}
+
+.botao-conhecer {
+  display: inline-block;
+  padding: 6px 20px;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  cursor: pointer;
+  box-sizing: border-box;
+  background: none;
+  position: relative;
+  margin-top: 20px;
+  color: var(--brancototal);
+  border: 2px solid var(--destaque);
+  border-radius: 8px;
+}
+.botao-conhecer:hover {
+  background: var(--destaque);
+  transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 800px) {
+  .barbearia-conteudo h1 {
+    font-size: 1.8rem;
+  }
+  .barbearia-conteudo h1::before {
+    height: 8px;
+    width: 28px;
+  }
+  .barbearia-conteudo {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+@media (max-width: 700px) {
+  .barbearia-conteudo h1 {
+    font-size: 1.4rem;
+    gap: 8px;
+    justify-content: center;
+  }
+  .barbearia-conteudo h1::before {
+    height: 8px;
+    width: 20px;
+  }
+  .barbearia-lista {
+    gap: 40px;
+    justify-content: center;
+  }
+}/*# sourceMappingURL=barbearias.css.map */

@@ -1,0 +1,62 @@
+.formulario-cadastro-salao input {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 20px;
+  border: 2px solid var(--destaque);
+  padding: 20px;
+  background: none;
+  color: var(--black10);
+  font-weight: 500;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.campo-senha-cadastro-salao {
+  position: relative;
+}
+
+.campo-senha-cadastro-salao img {
+  position: absolute;
+  top: 18px;
+  left: 90%;
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 10px 0px;
+}
+
+.formulario-cadastro-salao label {
+  margin-left: 20px;
+  margin-bottom: 4px;
+}
+
+.formulario-cadastro-salao div {
+  margin-bottom: 24px;
+}
+
+.formulario-cadastro-salao a {
+  font-size: 0.8rem;
+}
+.formulario-cadastro-salao a:hover {
+  color: var(--brancototal);
+  transition: 0.3s;
+}
+
+.fechar-cadastro-salao {
+  position: absolute;
+  top: -15px;
+  right: 45%;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--black4);
+  border: 4px solid var(--brancototal);
+  color: var(--brancototal);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.fechar-cadastro-salao:hover {
+  color: var(--black1);
+  transition: 0.3s;
+}/*# sourceMappingURL=cadastrar-salao.css.map */

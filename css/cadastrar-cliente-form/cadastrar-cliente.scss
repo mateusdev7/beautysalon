@@ -1,0 +1,149 @@
+.cadastrar-form-container {   
+    background: var(--black1);
+    box-shadow: 0px 0px 10px rgba(86, 88, 111, 0.5);
+    border-radius: 20px;
+    padding: 40px;
+    width: 500px;
+}
+
+.cadastrar-form-container h1 {
+    font-size: 2rem;
+    letter-spacing: 5%;
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+.cadastrar-form-container p {
+    text-align: center;
+    font-size: 0.8rem;
+    margin-bottom: 36px;
+}
+
+.formulario-cadastro-cliente input{
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: 2px solid var(--destaque);
+    padding: 14px 18px;
+    background: none;
+    color: var(--black10);
+    font-weight: 500;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.campo-senha-cadastro {
+    position: relative;
+}
+
+.campo-senha-cadastro img{
+    position: absolute;
+    top: 12px;
+    left: 90%;
+    cursor: pointer;
+    box-sizing: border-box;
+    padding: 10px 0px;
+}
+
+.formulario-cadastro-cliente inout::placeholder {
+    font-weight: 500;
+    font-family: 'Fira Sans', sans-serif;
+    color: var(--blac6);
+    letter-spacing: 1px;
+}
+
+.formulario-cadastro-cliente label {
+    margin-left: 20px;
+    margin-bottom: 4px;
+}
+
+.formulario-cadastro-cliente div {
+    margin-bottom: 24px;
+}
+
+.botao-cadastrar {
+    display: flex;
+    padding: 8px 24px;
+    cursor: pointer;
+    box-sizing: border-box;
+    background: none;
+    color: var(--brancototal);
+    width: 100%;
+    padding: 12px 0px;
+    font-size: 1.2rem;
+    letter-spacing: 5%;
+    border-radius: 20px;
+    margin-top: 32px;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    position: relative;
+    border: none;
+    margin-top: 40px;
+    &.type1{
+        color: var(--brancototal);
+    }
+    // Effect one
+    &.type1::after,
+    &.type1::before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 0;
+        border: 2px solid var(--brancototal);
+        transition: all 0.6s ease-in-out;
+    }
+    &.type1::after{
+        bottom: 0;
+        right: 0;
+        border-top-color: transparent;
+        border-left-color: transparent;
+    }
+
+    &.type1::before{
+        top: 0;
+        left: 0;
+        border-bottom-color: transparent;
+        border-right-color: transparent;
+    }
+    &.type1:hover:after,
+    &.type1:hover:before {
+        height: 100%;
+    }
+}
+
+.botao-cadastrar::after {
+    content: url("../../imagens/formularios/login_entre_icon.svg");
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+}
+
+.formulario-cadastro-cliente a {
+    font-size: 0.8rem;
+    &:hover {
+        color: var(--brancototal);
+        transition: .3s;
+    }
+}
+
+.fechar-cadastro {
+    position: absolute;
+    top: -20px;
+    right: 45%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--black4);
+    border: 4px solid var(--brancototal);
+    color: var(--brancototal);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.fechar-cadastro:hover {
+    color: var(--black1);
+    transition: .3s;
+}

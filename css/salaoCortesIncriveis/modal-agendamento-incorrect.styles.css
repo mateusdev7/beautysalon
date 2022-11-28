@@ -1,0 +1,46 @@
+.agendamento-container-incorrect {
+  background: var(--brancototal);
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+}
+.agendamento-container-incorrect .button-fechar-agendamento-incorrect {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  border: none;
+  color: var(--black1);
+  background: none;
+}
+.agendamento-container-incorrect .button-fechar-agendamento-incorrect:hover {
+  color: var(--brancototal);
+}
+.agendamento-container-incorrect .agendamento-container-incorrect-img {
+  background: #FF0000;
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+  display: grid;
+  place-content: center;
+  padding: 20px 0;
+}
+.agendamento-container-incorrect .agendamento-container-incorrect-informations {
+  padding: 30px 0;
+}
+.agendamento-container-incorrect .agendamento-container-incorrect-informations h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.agendamento-container-incorrect .agendamento-container-incorrect-informations p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  text-align: center;
+}/*# sourceMappingURL=modal-agendamento-incorrect.styles.css.map */

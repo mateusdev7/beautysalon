@@ -1,0 +1,124 @@
+.cadastrarFuncionario-right-container {
+    padding: 60px;
+    background: var(--brancototal);
+    box-shadow: 0px 0px 10px #B4B5BD;
+    border-radius: 12px;
+    height: 100%;
+    .cadastrarFuncionario-right-topo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            background: var(--black10);
+            width: 100%;
+            height: 2px;
+            top: 70px;
+        }
+    }
+}
+
+.formulario-dados-funcionario {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0px 20px;
+    margin-top: 40px;
+} 
+
+.formulario-dados-funcionario div {
+    margin-bottom: 20px;
+}
+
+.botao-confirmar-cliente {
+    grid-row: 5;
+    grid-column: 1 / -1;
+}
+
+.formulario-dados-funcionario input[type="text"],
+.formulario-dados-funcionario textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: 2px solid var(--destaque);
+    padding: 12px 20px;
+    background: none;
+    color: var(--black10);
+    font-weight: 500;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    color: var(--black2);
+    background: #f8f8f8;
+    &::placeholder {
+        color: var(--black8);
+    }
+    &:focus {
+        background: var(--brancototal);
+    }
+}
+
+.formulario-dados-funcionario textarea {
+    resize: none;
+    height: 15rem; 
+    outline: none;
+}
+
+.textAreaFuncionario {
+    grid-column: 1 / -1;
+}
+
+.formulario-dados-funcionario label{
+    margin-left: 20px;
+    margin-bottom: 4px;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.container-file-upload-input {
+    // grid-column: 1 / -1;
+    width: 10.625rem;
+    height: 11.75rem;
+    border: 2px solid var(--black4);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 12px;
+    padding: 2rem;
+    &.container-file-upload-input label {
+        margin-left: 0px;
+        margin-bottom: 0px;
+    }
+    &.container-file-upload-input p {
+        margin-top: 12px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    &.container-file-upload-input p::before {
+        content: url("../../../imagens/configuracao_conta_salao/upload-image.svg");
+    }
+}
+
+
+input[type="file"] {
+    display: none;
+}
+
+@media (max-width: 800px) { 
+    .cadastrarFuncionario-right-container {
+        padding: 20px;
+    } 
+    .formulario-dados-funcionario {
+        grid-template-columns: 1fr;
+    }
+    .botao-confirmar-cliente {
+        grid-row: 7;
+    }
+    .cadastrarFuncionario-right-topo img {
+        display: none;
+    }
+}

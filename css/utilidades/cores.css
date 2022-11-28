@@ -1,0 +1,76 @@
+:root {
+    --destaque: #FF8A00;
+    --black1: #06070C;
+    --black2: #101320;
+    --black3: #1A1B29;
+    --black4: #56586F;
+    --black5: #6C6E82;
+    --black6: #898B9A;
+    --black7: #A2A4B0;
+    --black8: #B4B5BD;
+    --black9: #C4C4CA;
+    --black10: #DADADB;
+    --black11: #E9E9E9;
+    --black12: #F0F0F0;
+    --brancototal: #FFFFFF;
+}
+
+.gradienteFundo {
+    background: linear-gradient(90deg, var(--black1) , var(--black2));
+}
+
+.destaque {
+    color: var(--destaque);
+}
+
+.black1 {
+    color: var(--black1)
+}
+
+.black2 {
+    color: var(--black2);
+}
+
+.black3 {
+    color: var(--black3);
+}
+
+.black4 {
+    color: var(--black4);
+}
+
+.black5 {
+    color: var(--black5);
+}
+
+.black6 {
+    color: var(--black6);
+}
+
+.black7 {
+    color: var(--black7);
+}
+
+.black8 {
+    color: var(--black8);
+}
+
+.black9 {
+    color: var(--black9);
+}
+
+.black10 {
+    color: var(--black10);
+}
+
+.black11 {
+    color: var(--black11);
+}
+
+.black12 {
+    color: var(--black12);
+}
+
+.brancototal {
+    color: var(--brancototal);
+}

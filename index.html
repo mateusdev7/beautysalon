@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet" href="./imports.css">
+    <link rel="icon" href="./icon_logo_favicon.ico" type="image/svg+xml">
+
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Fira+Sans:wght@400;500&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script> -->
+    <script type="module" src="./js/script.js" defer></script>
+    <script src="./scripts/User/redirect.js" defer></script>
+    <script>document.documentElement.classList.add('js')</script>
+
+    <title>BM - Página Inicial</title>
+</head>
+<body>
+    <header>
+        <div class="header-container container-header">
+            <a href="index.html">
+                <img src="./imagens/header/logo_icon.svg" class="logo">
+            </a>
+            <nav data-menu="nav">
+                <button data-menu="button" aria-expanded="false" aria-controls="menu">MENU</button>
+                <ul data-menu="list" id="menu" class="header-navegacao">
+                    <li class="header-nav-notificacao">
+                        <img src="./imagens/header/notificacao-icon.svg">
+                        <a href="#" class="font-p-medium black10">Notificações</a>
+                    </li>
+                    <li data-dropdown>
+                        <div class="header-nav-cadastrar">
+                            <img src="./imagens/header/arrow_down.svg" class="arrow-img">
+                            <a class="font-p-medium black10 cadastrar">Cadastrar</a>
+                        </div>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <img src="./imagens/header/cliente_icon.svg" alt="">
+                                <a class="font-p-semibold brancototal" data-modal="botaoCadastroCliente">Como Cliente</a>
+                            </li>
+                            <div class="traco"></div>
+                            <li>
+                                <img src="./imagens/header/salao_icon.svg" alt="">
+                                <a class="font-p-semibold brancototal" data-modal="botaoCadastroSalao">Como Salão</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <a class="font-p-semibold black10 botao type1 button-login" data-modal="login">Entrar</a>
+                    <li data-perfil-dropdown-index>
+                        <img src="../../imagens/header/profile_icon.svg">
+                        <ul class="perfil-dropdown-menu-index">
+                            <li>
+                                <img src="../../imagens/header/configuracoes_conta_icon.svg">
+                                <a style="cursor: pointer;" class="font-p-semibold brancototal" data-botao-conta-cliente>Conta</a>
+                            </li>
+                            <div class="traco"></div>
+                            <li>
+                                <img src="../../imagens/header/sair_conta_icon.svg">
+                                <a style="cursor: pointer;" class="font-p-semibold brancototal" data-botao-sair-cliente>Sair</a>
+                            </li>
+                        </ul>
+                  </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="modal-container" data-modal="containerLogin">
+        <div class="entrar-form-container modal">
+            <button data-modal="fechar" class="fechar-entrar font-p-semibold">X</button>
+            <h1 class="font-b-regular brancototal">Entre com a sua conta</h1>
+            <form action="" class="formulario-entrar">
+                <div>
+                    <label for="emailLogin" class="font-p-semibold black12">E-mail</label>
+                    <input type="email" id="emailLogin" name="emailLogin" placeholder="Digite seu e-mail">
+                </div>
+                <div>
+                    <label for="descriptionAccess" class="font-p-semibold black12">Senha</label>
+                    <div class="campo-senha">
+                        <input type="password" id="descriptionAccess" name="descriptionAccess" placeholder="Digite sua senha">
+                        <img src="./imagens/formularios/closed_eyes_icon.svg" alt="Senha escondida" class="eyes-password">
+                    </div>
+                </div>
+                <p class="responseLoginUser font-p-semibold destaque"></p>
+                <button type="input" class="botao-entrar font-p-semibold type1">ENTRE</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal-container-cadastro-cliente" data-modal="containerCadastroCliente">
+        <div class="cadastrar-form-container modal">
+            <button data-modal="fecharCadastro" class="fechar-cadastro font-p-semibold">X</button>
+            <h1 class="font-b-regular brancototal">Cadastro como Cliente</h1>
+            <form action="" class="formulario-cadastro-cliente">
+                <div>
+                    <label for="fullName" class="font-p-semibold black12">Nome Completo</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Seu nome">
+                </div>
+                <div>
+                    <label for="emailCadastroCliente" class="font-p-semibold black12">E-mail</label>
+                    <input type="email" id="emailCadastroCliente" name="emailCadastroCliente" placeholder="Digite seu e-mail">
+                </div>
+                <div>
+                    <label for="senhaCadastroCliente" class="font-p-semibold black12">Senha</label>
+                    <div class="campo-senha-cadastro">
+                        <input type="password" id="senhaCadastroCliente" name="senhaCadastroCliente" placeholder="Digite sua senha">
+                        <img src="./imagens/formularios/closed_eyes_icon.svg" alt="Senha escondida" class="eyes-password-senha">
+                    </div>
+                    
+                </div>
+
+                <div>
+                    <label for="senhaCadastroConfirmarCliente" class="font-p-semibold black12">Confirme sua senha</label>
+                    <div class="campo-senha-cadastro">
+                        <input type="password" id="senhaCadastroConfirmarCliente" name="senhaCadastroConfirmarCliente" placeholder="Digite sua senha">
+                        <img src="./imagens/formularios/closed_eyes_icon.svg" alt="Senha escondida" class="eyes-password-confirmar">
+                    </div>
+                </div>
+                <button type="submit" class="botao-cadastrar font-p-semibold type1">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal-container-cadastro-salao" data-modal="containerCadastroSalao">
+        <div class="cadastrar-form-container modal">
+            <button data-modal="fecharCadastroSalao" class="fechar-cadastro-salao font-p-semibold">X</button>
+            <h1 class="font-b-regular brancototal">Cadastro como Salão</h1>
+            <form action="" class="formulario-cadastro-salao">
+                <div>
+                    <label for="nomeSalao" class="font-p-semibold black12">Nome do Salão</label>
+                    <input type="text" id="nomeSalao" name="nomeSalao" placeholder="Digite o nome do salão">
+                </div>
+                <div>
+                    <label for="emailCadastroSalao" class="font-p-semibold black12">E-mail</label>
+                    <input type="email" id="emailCadastroSalao" name="emailCadastroSalao" placeholder="Digite seu e-mail">
+                </div>
+                <div>
+                    <label for="senhaCadastroSalao" class="font-p-semibold black12">Senha</label>
+                    <div class="campo-senha-cadastro-salao">
+                        <input type="password" id="senhaCadastroSalao" name="senhaCadastroSalao" placeholder="Digite sua senha">
+                        <img src="./imagens/formularios/closed_eyes_icon.svg" alt="Senha escondida" class="eyes-password-salao">
+                    </div>
+                </div>
+
+                <div>
+                    <label for="senhaCadastroConfirmarSalao" class="font-p-semibold black12">Confirme sua senha</label>
+                    <div class="campo-senha-cadastro-salao">
+                        <input type="password" id="senhaCadastroConfirmarSalao" name="senhaCadastroConfirmarSalao" placeholder="Digite sua senha">
+                        <img src="./imagens/formularios/closed_eyes_icon.svg" alt="Senha escondida" class="eyes-password-confirmar-salao">
+                    </div>
+                </div>
+                <button type="input" class="botao-cadastrar font-p-semibold type1">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+    
+    <section class="section-apresentacao" aria-label="Apresentação">
+        <div class="section-apresentacao-container container-conteudo">
+            <picture>
+                <source media="(max-width: 800px)" srcset="./imagens/section-imagens-apresentacao/imagem1_menor.jpg">
+                <img src="./imagens/section-imagens-apresentacao/imagem1.jpg" alt="Representação">
+            </picture>
+            <div class="section-apresentacao-flex">
+                <img src="./imagens/section-imagens-apresentacao/imagem2.jpg" alt="Segurança">
+                <img src="./imagens/section-imagens-apresentacao/imagem3.jpg" alt="Qualidade">
+            </div>
+        </div>
+    </section>
+
+    <main class="barbearia-bg">
+        <div class="barbearia-conteudo container-conteudo">
+            <h1 class="font-p-semibold brancototal">Barbearias Disponíveis</h1>
+            <div>
+                <ul class="barbearia-lista">
+                    <li>
+                        <img src="./imagens/main_barbearias/barbearia1.png" alt="Barbearia 1 - Logo">
+                        <div class="barbearia-informacao">
+                            <h3 class="font-p-semibold destaque">Cortes Incríveis</h3>
+                            <p class="font-f-regular black7">Bairro da Penha<br>nº 100 - Vitória/ES</p>
+                            <a href="./templates/salao/salao.html" target="_blank" class="botao-conhecer type1 font-p-semibold">Conhecer</a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <img src="./imagens/main_barbearias/barbearia2.png" alt="Barbearia 2 - Logo">
+                        <div class="barbearia-informacao">
+                            <h3 class="font-p-semibold destaque">Bigode</h3>
+                            <p class="font-f-regular black7">Bento Ferreira<br>nº 40 - Vitória/ES</p>
+                            <button class="botao-conhecer type1 font-p-semibold">Conhecer</button>
+                        </div>
+                    </li>
+
+                    <li>
+                        <img src="./imagens/main_barbearias/barbearia3.png" alt="Barbearia 3 - Logo">
+                        <div class="barbearia-informacao">
+                            <h3 class="font-p-semibold destaque">Velha Guarda</h3>
+                            <p class="font-f-regular black7">Av. Américo Buaiz<br>nº 200 - Vitória/ES</p>
+                            <button class="botao-conhecer type1 font-p-semibold">Conhecer</button>
+                        </div>
+                    </li>
+
+                    <li>
+                        <img src="./imagens/main_barbearias/barbearia4.png" alt="Barbearia 4 - Logo">
+                        <div class="barbearia-informacao">
+                            <h3 class="font-p-semibold destaque">Barbearia do Povo</h3>
+                            <p class="font-f-regular black7">Goiabeiras<br>nº 705 - Vitória/ES</p>
+                            <button class="botao-conhecer type1 font-p-semibold">Conhecer</button>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <img src="./imagens/main_barbearias/barbearia5.png" alt="Barbearia 5 - Logo">
+                        <div class="barbearia-informacao">
+                            <h3 class="font-p-semibold destaque">Cortes e Tons</h3>
+                            <p class="font-f-regular black7">Av. Prof. Hermínio  Blackman<br>nº 705 - Vitória/ES</p>
+                            <button class="botao-conhecer type1 font-p-semibold">Conhecer</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-bg">
+        <div class="footer container-conteudo">
+            <div class="footer-logo">
+                <img src="./imagens/header/logo_icon.svg">
+            </div>
+            <div class="footer-contato">
+                <h3 class="font-p-semibold brancototal">Contato</h3>
+                <ul class="font-f-regular black7">
+                    <li><a href="tel:+5527999999999">+55 27 99999-9999</a></li>
+                    <li><a href="mailto:contato@bm.com">contato@bm.com</a></li>
+                    <li>Avenida Professor Hermínio Blackman</li>
+                    <li>Vitória - Espírito Santo</li>
+                </ul>
+                <div class="footer-redes">
+                    <img src="./imagens/redes_icons/facebook_icon.svg">
+                    <img src="./imagens/redes_icons/intagram_icon.svg">
+                    <img src="./imagens/redes_icons/twitter_icon.svg">
+                </div>
+            </div>
+            <div class="footer-suporte">
+                <h3 class="font-p-semibold brancototal">Suporte</h3>
+                <nav>
+                    <ul class="font-f-regular black7">
+                        <li><a href="centraldeajuda.html">Central de Ajuda</a></li>
+                        <li><a href="comoagendar.html">Como agendar</a></li>
+                        <li><a href="comocadastrar.html">Como cadastrar meu salão</a></li>
+                        <li><a href="pagamentos.html">Métodos de pagamento</a></li>
+                        <li><a href="faleconosco.html">Fale conosco</a></li>
+                        <li><a href="ouvidoria.html">Ouvidoria</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <p class="footer-copy font-f-regular brancototal">BM © Alguns Direitos Reservados.</p>
+        </div>
+    </footer>
+    <script src="./scripts/User/registerUser.js"></script>
+    <script src="./scripts/User/loginUser.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+.agendamentos-salao-container {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    overflow-y: scroll;
+    box-sizing: border-box;
+    padding-right: 20px;
+    height: 600px;
+    &.agendamentos-salao-container::-webkit-scrollbar {
+        width: 16px;
+    }
+    &.agendamentos-salao-container::-webkit-scrollbar-thumb {
+        background-color: var(--black8);
+        border-left: 2px solid var(--brancototal);
+        border-right: 2px solid var(--brancototal);
+        border-radius: 8px;
+    }
+}
+.agendamentos-salao-corte {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border: 2px solid var(--black4);
+    border-radius: 20px;
+    box-sizing: border-box;
+    max-width: 100%;
+    flex-wrap: wrap;
+    gap: 10px;
+    cursor: pointer;
+    &:hover {
+        background: var(--black10);
+        transition: 0.3s;
+    }
+    .agendamentos-salao-info {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+
+.agendamentos-salao-info h3 {
+    font-size: 0.9rem;
+}
+.agendamentos-salao-info span {
+    font-size: 0.9rem;
+}
+
+@media (max-width: 720px) {
+    .agendamentos-salao-container h3 {
+        font-size: 1rem;
+    }
+    .agendamentos-salao-info span{
+        display: none;
+    }
+}

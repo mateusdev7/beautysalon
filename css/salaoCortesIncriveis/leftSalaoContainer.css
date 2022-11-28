@@ -1,0 +1,116 @@
+.container-salao-agendamento {
+  display: grid;
+  grid-template-columns: 6fr 3fr;
+  gap: 80px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.left-container-salao-agendamento {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+.left-container-salao-agendamento h1 {
+  font-size: 1.3rem;
+}
+.left-container-salao-agendamento .corte-opcao, .left-container-salao-agendamento .barba-opcao, .left-container-salao-agendamento .luzes-opcao, .left-container-salao-agendamento .pigmentacao-opcao, .left-container-salao-agendamento .sobrancelha-opcao {
+  border: 2px solid var(--black4);
+  border-radius: 1.25rem;
+  padding: 1.125rem 1.875rem;
+  display: flex;
+  align-items: center;
+}
+.left-container-salao-agendamento .corte-opcao img, .left-container-salao-agendamento .barba-opcao img, .left-container-salao-agendamento .luzes-opcao img, .left-container-salao-agendamento .pigmentacao-opcao img, .left-container-salao-agendamento .sobrancelha-opcao img {
+  margin-right: 12px;
+}
+.left-container-salao-agendamento .corte-opcao h4, .left-container-salao-agendamento .barba-opcao h4, .left-container-salao-agendamento .luzes-opcao h4, .left-container-salao-agendamento .pigmentacao-opcao h4, .left-container-salao-agendamento .sobrancelha-opcao h4 {
+  font-size: 1.125rem;
+}
+.left-container-salao-agendamento .corte-opcao span, .left-container-salao-agendamento .barba-opcao span, .left-container-salao-agendamento .luzes-opcao span, .left-container-salao-agendamento .pigmentacao-opcao span, .left-container-salao-agendamento .sobrancelha-opcao span {
+  margin-left: auto;
+  margin-right: 26px;
+  font-size: 1.25rem;
+}
+
+input[type=checkbox] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #fff;
+  margin-top: 5px;
+  width: 1.6em;
+  height: 1.6em;
+  border: 0.15em solid var(--black2);
+  border-radius: 4px;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+}
+
+input[type=checkbox]::before {
+  content: url("../../imagens/cliente-salao/arrow-checkbox.svg");
+  transform: scale(0);
+  margin-top: 5px;
+  transition: 120ms transform ease-in-out;
+}
+
+input[type=checkbox]:checked::before {
+  transform: scale(1);
+}
+
+input[type=date] {
+  font-size: 1.1rem;
+}
+
+.container-data-and-hour {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.container-data-and-hour .container-data, .container-data-and-hour .container-hour {
+  border: 2px solid var(--black4);
+  border-radius: 1.25rem;
+  padding: 1.125rem 1.875rem;
+  width: 27%;
+}
+
+.container-geral-professional {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.container-geral-professional .container-professional {
+  background: #FAFAFA;
+  box-shadow: 0px 0px 10px #B4B5BD;
+  border-radius: 1rem;
+  padding: 20px 30px;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+.container-geral-professional .container-professional:hover {
+  background: #ffba6c;
+}
+.container-geral-professional .container-professional-name {
+  display: flex;
+  align-items: center;
+}
+.container-geral-professional .container-professional-experience {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.container-geral-professional .avatar-julia, .container-geral-professional .avatar-heitor, .container-geral-professional .avatar-rafael {
+  margin-left: auto;
+}
+.container-geral-professional .container-professional-informations div {
+  margin-top: 10px;
+}
+
+.botao-confirmar-agendamento {
+  margin-top: 10px;
+}
+
+.container-professional.selecionado {
+  background: #ffba6c;
+}/*# sourceMappingURL=leftSalaoContainer.css.map */

@@ -1,0 +1,114 @@
+.container-salao-agendamento {
+  display: grid;
+  grid-template-columns: 6fr 3fr;
+  gap: 80px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.left-container-salao-agendamento {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  & h1 {
+    font-size: 1.3rem;
+  }
+  & .corte-opcao, .barba-opcao, .luzes-opcao, .pigmentacao-opcao, .sobrancelha-opcao {
+    border: 2px solid var(--black4);
+    border-radius: 1.25rem;
+    padding: 1.125rem 1.875rem;
+    display: flex;
+    align-items: center;
+    & img {
+      margin-right: 12px;
+    }
+    & h4 {
+      font-size: 1.125rem;
+    }
+    & span {
+      margin-left: auto;
+      margin-right: 26px;
+      font-size: 1.25rem;
+    }
+  }
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  background-color: #fff;
+  margin-top: 5px;
+  width: 1.60em;
+  height: 1.60em;
+  border: 0.15em solid var(--black2);
+  border-radius: 4px;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+}
+
+input[type="checkbox"]::before {
+  content: url("../../imagens/cliente-salao/arrow-checkbox.svg");
+  transform: scale(0);
+  margin-top: 5px;
+  transition: 120ms transform ease-in-out;
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+input[type="date"] {
+  font-size: 1.1rem;
+}
+
+.container-data-and-hour {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  & .container-data, .container-hour {
+    border: 2px solid var(--black4);
+    border-radius: 1.25rem;
+    padding: 1.125rem 1.875rem;
+    width: 27%;
+  }
+}
+
+
+.container-geral-professional {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  & .container-professional {
+    background: #FAFAFA;
+    box-shadow: 0px 0px 10px #B4B5BD;
+    border-radius: 1rem;
+    padding: 20px 30px;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    &:hover{
+      background: #ffba6c;
+    }
+  }
+  & .container-professional-name {
+    display: flex;
+    align-items: center;
+  }
+  & .container-professional-experience {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  & .avatar-julia, .avatar-heitor, .avatar-rafael {
+    margin-left: auto;
+  }
+  & .container-professional-informations div{
+    margin-top: 10px;
+  }
+}
+.botao-confirmar-agendamento {
+  margin-top: 10px;
+}
+
+.container-professional.selecionado {
+  background: #ffba6c;
+}

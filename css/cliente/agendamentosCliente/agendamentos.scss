@@ -1,0 +1,88 @@
+.agendamentos-right-container {
+    padding: 60px;
+    background: var(--brancototal);
+    box-shadow: 0px 0px 10px #B4B5BD;
+    border-radius: 12px;
+    height: 100%;
+    .agendamentos-right-topo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            background: var(--black10);
+            width: 100%;
+            height: 2px;
+            top: 70px;
+        }
+    }
+    .agendamentos-container {
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+        overflow-y: scroll;
+        box-sizing: border-box;
+        padding-right: 20px;
+        height: 600px;
+        &.agendamentos-container::-webkit-scrollbar {
+            width: 16px;
+        }
+        &.agendamentos-container::-webkit-scrollbar-thumb {
+            background-color: var(--black8);
+            border-left: 2px solid var(--brancototal);
+            border-right: 2px solid var(--brancototal);
+            border-radius: 8px;
+        }
+    }
+    .agendamentos-corte {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 20px;
+        border: 2px solid var(--black4);
+        border-radius: 20px;
+        box-sizing: border-box;
+        max-width: 100%;
+        flex-wrap: wrap;
+        gap: 10px;
+        cursor: pointer;
+        &:hover {
+            background: var(--black10);
+            transition: 0.3s;
+        }
+        .agendamentos-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    }
+}
+
+.agendamentos-info h3 {
+    font-size: 0.9rem;
+}
+.agendamentos-info span {
+    font-size: 0.9rem;
+}
+
+@media (max-width: 800px) { 
+    .agendamentos-right-container {
+        padding: 20px;
+    }
+    .agendamentos-right-topo h3, .dados-right-topo h3, .cadastrarFuncionario-right-topo h3 {
+        font-size: 0.9rem;
+    }
+    .agendamentos-right-topo span, .dados-right-topo span, .cadastrarFuncionario-right-topo span {
+        font-size: 0.9rem;
+    }
+    .agendamentos-info span{
+        display: none;
+    }
+    .agendamentos-right-topo img {
+        display: none;
+    }
+}
