@@ -31,7 +31,7 @@ export default function initModalCorrectAgendamento() {
     events.forEach((userEvent) => {
       botaoAbrirModal.addEventListener(userEvent, () => {
         allProfessional.forEach((professional) => {
-          if (valorResult.textContent === 'R$ 00,00'
+          if (valorResult.textContent === 'R$ 00,00' || valorResult.textContent === 'R$ 0,00'
               || horaResult.textContent === 'HH:MM'
               || dataResult.textContent === 'YYYY/MM/DD'
               || !(professional.classList.contains('selecionado'))) {
