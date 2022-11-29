@@ -6,6 +6,7 @@ class MongoConnection:
         self.myclient = pymongo.MongoClient("mongodb://localhost:27017/")
         self.mydb = self.myclient["bm"]
         self.collectionUsers = self.mydb["user"]
+        self.collectionSallon = self.mydb["sallon"]
     def close(self):
         self.myclient.close()
         

@@ -11,7 +11,6 @@ export default function initModalCorrectAgendamento() {
   const horaResult = document.querySelector('.hora-result');
   const dataResult = document.querySelector('.data-result');
   const leftContainer = document.querySelector('.left-container-salao-agendamento');
-  const allProfessional = leftContainer.querySelectorAll('.container-professional');
 
   function toggleModalAgendamento() {
     containerModalAgendamento.classList.toggle('activeModal');
@@ -27,8 +26,10 @@ export default function initModalCorrectAgendamento() {
         containerModalAgendamento.classList.toggle('activeModal');
       }
     };
-
-    events.forEach((userEvent) => {
+  }
+  events.forEach((userEvent) => {
+    if (botaoAbrirModal && leftContainer) {
+      const allProfessional = leftContainer.querySelectorAll('.container-professional');
       botaoAbrirModal.addEventListener(userEvent, () => {
         allProfessional.forEach((professional) => {
           if (valorResult.textContent === 'R$ 00,00' || valorResult.textContent === 'R$ 0,00'
@@ -45,6 +46,6 @@ export default function initModalCorrectAgendamento() {
       botaoConcluirCorrect.addEventListener(userEvent, toggleModalAgendamento);
       botaoVoltarIncorrect.addEventListener(userEvent, toggleModalAgendamentoIncorrect);
       botaoFecharModalIncorrect.addEventListener(userEvent, toggleModalAgendamentoIncorrect);
-    });
-  }
+    }
+  });
 }
